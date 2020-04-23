@@ -1,0 +1,54 @@
+<HASTSettings>
+    <GeneralSettings>
+        <InputFileTypes>*.csv</InputFileTypes>
+        <PeakGustFileTypes>*.shp,*.netCDF</PeakGustFileTypes>
+        <OutputPath>..\Output\</OutputPath>
+        <InputPath>..\Input\</InputPath>
+    </GeneralSettings>
+    <data>
+        <PreProcessingFields>
+            <Longitude inputFieldName="LONGITUDE" required="yes">longitude</Longitude>
+            <Latitude inputFieldName="LATITUDE" required="yes">latitude</Latitude>
+            <SOID inputFieldName="SO" required="yes">SpecificOcc_ID,SOID,SO,SOccId,SOCCID,soccid</SOID>
+            <BuildingArea inputFieldName="AREA" required="yes">BuildingArea,Building Area, Building_Area,Area,area,AREA</BuildingArea>
+            <BuildingValue inputFieldName="COST" required="yes">BuildingValue,Building Value, Building_Value,Value,value,VALUE,Cost</BuildingValue>
+            <ContentValue inputFieldName="COST" required="yes">contentvalue, content value</ContentValue>
+            <HUSBT inputFieldName="HUSBT" required="yes">HUSBT,husbt</HUSBT>
+            <CensusBlockID inputFieldName="" required="no">censusblockid, census block id</CensusBlockID>
+            <TerrainID inputFieldName="" required="no">terrainid, terrain id</TerrainID>
+            <WBID inputFieldName="" required="no">wbid, wb id</WBID>
+        </PreProcessingFields>
+        <AnalysisFields>
+        <Longitude inputFieldName="LONGITUDE" required="yes">longitude</Longitude>
+            <Latitude inputFieldName="LATITUDE" required="yes">latitude</Latitude>
+            <SOID inputFieldName="SOCCID" required="yes">SpecificOcc_ID,SOID,SO,SOccId,SOCCID,soccid</SOID>
+            <BuildingArea inputFieldName="AREA" required="yes">BuildingArea,Building Area, Building_Area,Area,area,AREA</BuildingArea>
+            <BuildingValue inputFieldName="COST" required="yes">BuildingValue,Building Value, Building_Value,Value,value,VALUE,Cost</BuildingValue>
+            <HUSBT inputFieldName="HUSBT" required="yes">HUSBT,husbt</HUSBT>
+            <TerrainID inputFieldName="TERRAINID" required="yes">terrainid, terrain id</TerrainID>
+            <WBID inputFieldName="WBID" required="yes">wbid, wb id</WBID>
+        </AnalysisFields>
+        <LookupTables>
+            <LUTPath>..\LUT</LUTPath>
+            <SurfaceRoughNess>\HI\HI_HuCB_SurfaceRoughness.csv</SurfaceRoughNess>
+            <TerrainID>\HU_TerrainId_Dist.csv</TerrainID>
+            <WbId>\HU_DefaultWbID.csv</WbId>
+            <PWindField>..\WindField\Probabilistic\HI_PWS_Tract_8RP.csv</PWindField>
+            <SOPct>\SO_PctDist.csv</SOPct>
+            <HUStates>\HU_States.csv</HUStates>
+            <CBGeoJson>\HI\hzCensusblock_TIGER.geojson</CBGeoJson>
+            <HUDamageFunctions>\HU_DamageFunctions.csv</HUDamageFunctions>
+        </LookupTables>
+        <Logging>
+            <LogFileName>../Log/app.log</LogFileName>
+            <Level>DEBUG</Level>
+        </Logging>
+    </data>
+    <currentrun>
+        <WindFieldDataFile>C:/Users/petra/Documents/GUI/HI_Honoluly_UDF.csv</WindFieldDataFile>
+        <InputFileName>C:/Users/petra/Documents/GUI/Input/HI_hzSchool_UDF_Input_pre_processed.csv</InputFileName>
+        <InputFileFieldMap>C:/Users/petra/Documents/GUI/Input/HI_hzSchool_UDF_Input_pre_processed.csv</InputFileFieldMap>
+        <PreProcessedDataFileName>C:/Users/petra/Documents/GUI/HI_hzSchool_UDF_Input_pre_processed.csv</PreProcessedDataFileName>
+        <stateID />
+    </currentrun>
+</HASTSettings>
